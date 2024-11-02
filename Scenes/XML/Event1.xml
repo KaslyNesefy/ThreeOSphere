@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Event>
+  <Id> "3" </Id>
+  <Title> "Event1" </Title>
+  <Description> "Description" </Description>
+  <ButtonText> "Does no Shit" </ButtonText>
+</Event>

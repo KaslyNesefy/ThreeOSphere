@@ -2,10 +2,10 @@
 
 public class RedSphere : Player
 {
-    private protected override void InitializePlayer()
-    {
-        base.InitializePlayer();
+    private protected override void ResetCharacteristics() 
+    { 
+        base.ResetCharacteristics();
 
-        _characteristics[(byte)CharacteristicsIndexes.Physical] += 3;
+        _characteristics.ChangeValue(CharacteristicsIndexes.Physical, 3);
     }
 }

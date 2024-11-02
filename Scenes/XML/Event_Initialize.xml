@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Event>
+  <Id> "1" </Id>
+  <Title> "Event_Initialize" </Title>
+  <Description> "Description" </Description>
+  <ButtonText> "DoesShit" </ButtonText>
+  <ButtonText> "SameShit" </ButtonText>
+  <ButtonText> "AnotherShit" </ButtonText>
+</Event>

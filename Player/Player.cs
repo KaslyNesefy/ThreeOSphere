@@ -12,16 +12,16 @@ public abstract class Player : MonoBehaviour
     {
         _characteristics = new Characteristics();
         _items = new List<Item>();
+        ResetCharacteristics();
     }
+    private protected virtual void ResetCharacteristics() => _characteristics.ResetCharacteristics();
 
-    private protected virtual void RefreshCharacteristics() 
+    private protected virtual void RefreshCharacteristics()
     {
-
+        ResetCharacteristics();
 
         if (_items is null)
             return;
-
-
 
         foreach (Item item in _items)
         {
@@ -30,4 +30,18 @@ public abstract class Player : MonoBehaviour
         }
     }
 
+    public virtual void GetCharacteristicValue(CharacteristicsIndexes index) => _characteristics.GetValue(index);
+
+    public virtual void AddItem(Item item)
+    {
+        _items.Add(item);
+        RefreshCharacteristics();
+    }
+    public virtual void LoseItem(Item item)
+    {
+        if (!_items.Exists(existingItem => existingItem.GetId() == item.GetId()))
+            return;
+        _items.Remove(item);
+        RefreshCharacteristics();
+    }
 }
